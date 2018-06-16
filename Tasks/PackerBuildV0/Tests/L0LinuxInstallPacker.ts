@@ -1,7 +1,6 @@
 import ma = require('vsts-task-lib/mock-answer');
 import tmrm = require('vsts-task-lib/mock-run');
 import path = require('path');
-import * as constants from '../Src/constants'
 
 const DefaultWorkingDirectory: string = "/a/w";
 
@@ -51,7 +50,7 @@ let a: any = <any>{
     "exec": {
         "packer --version": {
             "code": 0,
-            "stdout": process.env["__lower_version__"] === "true" ? "0.11.2" : constants.CurrentSupportedPackerVersionString
+            "stdout": process.env["__lower_version__"] === "true" ? "0.11.2" : "0.12.3"
         },
         "/tmp/tempdir/100/packer/packer fix -validate=false /tmp/tempdir/100/default.linux.template.json": {
             "code": 0,

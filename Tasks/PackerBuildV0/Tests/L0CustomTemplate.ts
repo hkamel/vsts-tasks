@@ -1,7 +1,6 @@
 import ma = require('vsts-task-lib/mock-answer');
 import tmrm = require('vsts-task-lib/mock-run');
 import path = require('path');
-import * as constants from '../Src/constants'
 
 let taskPath = path.join(__dirname, '..\\src\\main.js');
 let tr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
@@ -27,7 +26,7 @@ let a: any = <any>{
     "exec": {
         "packer --version": {
             "code": 0,
-            "stdout": constants.CurrentSupportedPackerVersionString
+            "stdout": "0.12.3"
         },
         "packer fix -validate=false C:\\custom.template.json": {
             "code": 0,
